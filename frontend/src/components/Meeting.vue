@@ -7,7 +7,7 @@
       <h3 class="toggle__label">How to toggle:</h3>
       <div class="toggle__value">
         Description: {{ description }}<br>
-        Task: {{ meeting }}<br>
+        Task: {{ task }}<br>
         Project: {{ project }}
       </div>
       <a v-bind:href="url">
@@ -27,9 +27,6 @@ export default {
     return {
       type: '',
       name: '',
-      description: '',
-      task: '',
-      project: '',
       url: ''
     }
   },
@@ -45,18 +42,48 @@ export default {
   },
   computed: {
     description: function () {
-      return ''
-      // switch(this.type) {
-      //   case 'android':
-      //   case 'elixir':
-      //   case 'ember':
-      //   case 'frontend':
-      //   case 'ios':
-      //   case 'nodejs':
-      //   case 'react':
-      //   case 'react-native':
-      //   case 'ror':
-      // }
+      switch (this.type) {
+        case 'android':
+          return 'android meeting'
+        case 'elixir':
+          return 'elixir meeting'
+        case 'ember':
+          return 'ember meeting'
+        case 'frontend':
+          return 'fronteend meeting'
+        case 'ios':
+          return ''
+        case 'nodejs':
+          return 'node meeting'
+        case 'react':
+          return 'react meeting'
+        case 'react-native':
+          return 'rn meeting'
+        case 'ror':
+          return 'ror meeting'
+        case 'junior':
+          return 'juniors meeting'
+        case 'qa':
+          return 'qa meeting'
+        case 'vue':
+          return 'vue meeting'
+      }
+    },
+    project: function () {
+      switch (this.type) {
+        case 'ios':
+          return 'iOS'
+        default:
+          return 'netguru'
+      }
+    },
+    task: function () {
+      switch (this.type) {
+        case 'ios':
+          return 'team-meeting'
+        default:
+          return 'meeting'
+      }
     }
   }
 }

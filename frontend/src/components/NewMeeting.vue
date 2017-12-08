@@ -40,7 +40,7 @@
         </div>
         <div class="url-container">
           <label for="url">Paste url to the meeting</label>
-          <input id="url" type="text">
+          <input id="url" type="url">
         </div>
        
         <button type="submit">Create a new meeting</button>

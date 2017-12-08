@@ -7,7 +7,7 @@
         </div>
         <div class="toggle">
           <h3 class="toggle__label">Url to the meeting</h3>
-          <div class="toggle__value">
+          <div class="toggle__value" v-on:click="handleClick">
             {{ location }}meeting/{{ id }}
           </div>
         </div>
@@ -63,6 +63,16 @@ export default {
     }
   },
   methods: {
+    handleClick: function (e) {
+      function selectElementContents (el) {
+        var range = document.createRange()
+        range.selectNodeContents(el)
+        var sel = window.getSelection()
+        sel.removeAllRanges()
+        sel.addRange(range)
+      }
+      selectElementContents(e.target)
+    },
     submitMeeting: function (e) {
       e.preventDefault()
       axios

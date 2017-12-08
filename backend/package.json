@@ -1,0 +1,10 @@
+{
+  "name": "meetguru-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.166.0",
+    "shortid": "^2.2.8"
+  }
+}

@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "aws-sdk": "^2.166.0",
+    "aws-sdk": "^2.814.0",
     "shortid": "^2.2.8"
   }
 }
